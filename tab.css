@@ -1,0 +1,65 @@
+        /**************CSS FOR TABS*************/
+        .event-tab{
+            background-color: #f1f1f1;
+        }
+        .event-tab .event-container {
+            width: 60%;
+            overflow-y: hidden;
+            overflow-x: auto;
+            margin-bottom: 4px;
+            padding-top:16px;
+            position: relative;
+        }
+        .event-tab .card-columns{
+            column-gap:0;
+            display: flex;
+            width: 205%;
+            padding-bottom: 26px;
+        }
+        .event-tab .event-container .card{
+            border: none;
+            margin:0px;
+            padding-top: 0px;
+            border-bottom: 4px solid #E259a3;
+            border-radius: 0px;
+            position: relative;
+            cursor: pointer;
+            background-color: transparent !important;
+        }
+        .event-tab .event-container .card .date-tab{
+            font-weight: 500;
+            font-size: 2rem;
+        }
+        .event-tab .event-container .card i{
+            position: absolute;
+            bottom: -24%;
+            left: 50%;
+            background-image: -webkit-linear-gradient(to bottom right, #E259a3, #F75288);
+            background-image: linear-gradient(to bottom right, #E259a3, #F75288);
+            color:transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            opacity: 0;
+            transition: 0.5s ease;
+            transform: translateX(-50%);
+        }
+        .event-tab .event-container .card i.active{
+            opacity: 1;
+        }
+        .event-tab .event-container .card .card-body{
+            padding-bottom: 0px;
+        }
+
+        /***************CSS FOR Tab MEDIA QUERY*****************/
+
+        @media only screen and (max-width:500px){
+            .event-tab .event-container .card .card-body{
+                padding: 0.5rem;
+            }
+            .event-tab .event-container .card .date-tab , .event-tab .event-container .card .day-tab{
+                font-size: 0.9rem;
+            }
+            .event-tab .event-container .card i{
+                bottom: -26%;
+            }
+        }

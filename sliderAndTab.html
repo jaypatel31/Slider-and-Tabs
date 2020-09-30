@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLIDESHOW</title>
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="slider.css">
+    <link rel="stylesheet" href="tab.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="img-slider ">
+        <!--LEFT RIGHT BUTTON-->
+        <div class="button button-left" onclick="left()">
+            <a ><i class="fas fa-angle-left fa-2x"></i></i></a>
+        </div>
+        <div class="button button-right" onclick="right()">
+            <a ><i class="fas fa-angle-right fa-2x"></i></i></a>
+        </div>
+        <!-- Full-width images -->
+        <div class="slider-image ">
+          <img src="https://www.w3schools.com/howto/img_nature_wide.jpg">
+        </div>
+      
+        <div class="slider-image ">
+          <img src="https://www.w3schools.com/howto/img_snow_wide.jpg">
+        </div>
+      
+        <div class="slider-image ">
+          <img src="https://www.w3schools.com/howto/img_mountains_wide.jpg">
+        </div>
+      
+        <!-- The dots/circles -->
+        <div class="pointer">
+            <div class="dot" onclick="move(0)"><i class="fas fa-circle "></i></div>
+            <div class="dot" onclick="move(1)"><i class="fas fa-circle "></i></div>
+            <div class="dot" onclick="move(2)"><i class="fas fa-circle "></i></div>
+        </div>
+      </div>
+      <br>
+
+      <!--BOOTSTRAP CARD SLIDER-->
+
+    <div class="card-slider">
+        <div class="card-deck ">
+
+            <!--BUTTON-->
+
+            <div class="button button-left" onclick="leftCard()">
+                <a ><i class="fas fa-angle-left fa-2x"></i></i></a>
+            </div>
+            <div class="button button-right" onclick="rightCard()">
+                <a ><i class="fas fa-angle-right fa-2x"></i></i></a>
+            </div>
+
+        <!--SLIDER-->
+
+        <div class="card-container">
+            <div class="card-slide">
+                  <div class="card bg-primary s-card">
+                    <div class="card-body text-center">
+                      <p class="card-text">Some text inside the first card</p>
+                    </div>
+                  </div>
+                  <div class="card bg-warning s-card">
+                    <div class="card-body text-center">
+                      <p class="card-text">Some text inside the second card</p>
+                    </div>
+                  </div>
+                  <div class="card bg-secondary s-card">
+                    <div class="card-body text-center">
+                      <p class="card-text">Some text inside the third card</p>
+                    </div>
+                  </div>
+                  <div class="card bg-danger s-card">
+                    <div class="card-body text-center">
+                      <p class="card-text">Some text inside the fourth card</p>
+                    </div>
+                  </div>
+                  <div class="card bg-primary s-card">
+                    <div class="card-body text-center">
+                      <p class="card-text">Some text inside the first card</p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--TABS SECTION-->
+
+    <div class="event-tab clearfix">
+        <div class="event-container float-right">
+            <div class="card-columns">
+              <div class="card bg-light tab-card" onclick="dateChange('0')">
+                <i class="fas fa-caret-down fa-3x active"></i>
+                <div class="card-body text-center">
+                  <p class="card-text">
+                        <div class="date-tab">
+                            15 OCT
+                        </div>
+                        <div class="day-tab">
+                            First Day
+                        </div></p>
+                </div>
+              </div>
+              <div class="card bg-light tab-card" onclick="dateChange('1')">
+                <i class="fas fa-caret-down fa-3x"></i>
+                <div class="card-body text-center">
+                  <p class="card-text">
+                        <div class="date-tab">
+                            17 OCT
+                        </div>
+                        <div class="day-tab">
+                            Second Day
+                        </div></p>
+                </div>
+              </div>
+              <div class="card bg-light tab-card" onclick="dateChange('2')">
+                <i class="fas fa-caret-down fa-3x"></i>
+                <div class="card-body text-center">
+                    <p class="card-text">
+                        <div class="date-tab">
+                            19 OCT
+                        </div>
+                        <div class="day-tab">
+                            Third Day
+                        </div>
+                    </p>
+                </div>
+              </div>
+              <div class="card bg-light tab-card" onclick="dateChange('3')">
+                <i class="fas fa-caret-down fa-3x"></i>
+                <div class="card-body text-center">
+                    <p class="card-text">
+                        <div class="date-tab">
+                            23 OCT
+                        </div>
+                        <div class="day-tab">
+                            Fourth Day
+                        </div>
+                    </p>
+                </div>
+              </div>
+              <div class="card bg-light tab-card" onclick="dateChange('4')">
+                <i class="fas fa-caret-down fa-3x"></i>
+                <div class="card-body text-center">
+                    <p class="card-text">
+                        <div class="date-tab">
+                            27 OCT
+                        </div>
+                        <div class="day-tab">
+                            Fifth Day
+                        </div>
+                    </p>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="slider.js"></script>
+<script src="tab.js"></script>
+<script>
+    
+</script>
+</html>

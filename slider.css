@@ -1,0 +1,171 @@
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            padding:0;
+            font-family: 'Montserrat', sans-serif;
+        }
+        /***************CSS FOR IMAGE SLIDER*****************/
+        .img-slider .slider-image{
+            display: none;
+        }
+        .img-slider .slider-image:first-child{
+            display: block;
+        }
+        .img-slider{
+            margin: auto;
+            padding: 0px;
+            width: 100%;
+            position: relative;
+        }
+        .img-slider .slider-image{
+            position: relative;
+            animation-name: fade;
+            animation-duration: 2s;
+        }
+        .img-slider .slider-image img{
+            width: 100%;
+            display: inline-block;
+        }
+        .fade{
+            animation-name: fade;
+            animation-duration: 2s;
+        }
+        @keyframes fade{
+            from {opacity: 0.5;}
+            to:{opacity: 1;}
+        }
+        .img-slider .button, .card-deck .button{
+            position: absolute;
+            transform: translate(-50%,-50%);
+            top:50%;
+            cursor: pointer;
+            z-index: 2;
+        }
+        .img-slider .button a i{
+            color: #ffffff;
+            transition: 0.5s ease;
+        }
+        .img-slider .button a i:hover{
+            color: #000000;
+        }
+        .img-slider .button-left{
+            left:3%;
+        }
+        .img-slider .button-right{
+            right:3%;
+        }
+        .pointer{
+            position: absolute;
+            transform: translate(-50%,-50%);
+            bottom: 5%;
+            left:50%;
+        }
+        .pointer .dot{
+            display: inline-block;
+            cursor: pointer;
+        }
+        .pointer .dot i{
+            color: #f1f1f1;
+        }
+        .pointer .dot .active{
+              background-image: -webkit-linear-gradient(to bottom right, #E259a3, #F75288);
+              background-image: linear-gradient(to bottom right, #E259a3, #F75288);
+              color:transparent;
+              -webkit-background-clip: text;
+              background-clip: text;
+        }
+        /***************CSS FOR CARD SLIDER*****************/
+        .card-slider .card-deck{
+            position: relative;
+             display: flex;
+             justify-content: space-around;
+             width: 98%;
+             margin: auto;
+        }
+        .card-slider .card{
+            height:200px;
+            width: 3.1%;
+            transition: 0.5s ease;
+            flex:inherit !important;
+            position: relative;
+            right: 0;
+            left: 0;
+        }
+        .card-slider .left-move{
+            left: auto;
+            right: 350px;
+        }
+        .card-slider .right-move{
+            right: auto;
+            left:350px;
+        }
+        .card-slider .card-container{
+            overflow: hidden;
+            margin: 20px;
+        }
+        .card-slider .card-slide{
+            top: 0%;
+            width: 999%;
+            display: flex;
+            left: 0%;
+            transition: 0.5s ease;
+        }
+
+        .card-slider .card-deck  .button a i{
+            color: #000000;
+            transition: 0.5s ease;
+        }
+        .card-slider .card-deck .button a i:hover{
+            color: red;
+        }
+        .card-slider .card-deck .button-left{
+            left:2%;
+        }
+        .card-slider .card-deck  .button-right{
+            right:0%;
+        }
+
+        
+        
+        /***************CSS FOR SLDIER MEDIA QUERY*****************/
+
+        @media only screen and (max-width:500px){
+            .img-slider .slider-image img{
+                height: 200px;
+            }
+            .event-tab .event-container .card .card-body{
+                padding: 0.5rem;
+            }
+            .event-tab .event-container .card .date-tab , .event-tab .event-container .card .day-tab{
+                font-size: 0.9rem;
+            }
+            .event-tab .event-container .card i{
+                bottom: -26%;
+            }
+        }
+        @media only screen and (max-width: 1190px){
+            .card-slider .card{
+                width: 3.04%;
+            }
+        }
+        @media only screen and (max-width: 709px){
+            .card-slider .card{
+                width: 4.5%;
+            }
+        }
+        @media only screen and (max-width:576px){
+            .card-slider .card{
+                margin-right: 15px;
+                margin-bottom: 0;
+                margin-left: 15px;
+                width: 9.4%;
+            }
+        }
+        /***************TO ENABLE BOOTSTRAP ANIMATION*****************/
+        @media (prefers-reduced-motion: reduce){
+            .carousel-item {
+                transition: transform 2s ease, opacity .5s ease-out;
+            }
+        }
