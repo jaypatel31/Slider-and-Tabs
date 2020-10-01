@@ -3,7 +3,7 @@
             background-color: #f1f1f1;
         }
         .event-tab .event-container {
-            width: 60%;
+            width: 100%;
             overflow-y: hidden;
             overflow-x: auto;
             margin-bottom: 4px;
@@ -13,14 +13,14 @@
         .event-tab .card-columns{
             column-gap:0;
             display: flex;
-            width: 205%;
-            padding-bottom: 26px;
+            width: 110%;
+            border-bottom: 4px solid #E259a3;
+            margin-bottom: 30px;
         }
         .event-tab .event-container .card{
             border: none;
             margin:0px;
             padding-top: 0px;
-            border-bottom: 4px solid #E259a3;
             border-radius: 0px;
             position: relative;
             cursor: pointer;
@@ -32,7 +32,7 @@
         }
         .event-tab .event-container .card i{
             position: absolute;
-            bottom: -24%;
+            bottom: -25%;
             left: 50%;
             background-image: -webkit-linear-gradient(to bottom right, #E259a3, #F75288);
             background-image: linear-gradient(to bottom right, #E259a3, #F75288);
@@ -55,6 +55,9 @@
         @media only screen and (max-width:500px){
             .event-tab .event-container .card .card-body{
                 padding: 0.5rem;
+            }
+            .event-tab .card-columns{
+                width: 130%;
             }
             .event-tab .event-container .card .date-tab , .event-tab .event-container .card .day-tab{
                 font-size: 0.9rem;

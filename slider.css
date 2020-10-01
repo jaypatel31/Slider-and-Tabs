@@ -9,6 +9,38 @@
         /***************CSS FOR IMAGE SLIDER*****************/
         .img-slider .slider-image{
             display: none;
+            position: relative;
+        }
+        .img-slider .slider-image .slider-text{
+            position: absolute;
+            transform: translate(-50%,-50%);
+            bottom: 10%;
+            left: 50%;
+            font-weight: bold;
+            font-size: 2.5rem;
+            color:#fff;
+        }
+        .img-slider .slider-image:after{
+            content:'';
+            position:absolute;
+            right:0; 
+            top:0;
+            width:15%;
+            height:100%;
+            display:inline-block;
+            background: linear-gradient(to right, transparent 0%,rgba(0,0,0,0.6) 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002f4b', endColorstr='#00000000',GradientType=0 );
+        }
+        .img-slider .slider-image:before{
+            content:'';
+            position:absolute;
+            left:0; 
+            top:0;
+            width:15%;
+            height:100%;
+            display:inline-block;
+            background: linear-gradient(to right, rgba(0,0,0,0.6) 0%, transparent 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002f4b', endColorstr='#00000000',GradientType=0 );
         }
         .img-slider .slider-image:first-child{
             display: block;
@@ -85,12 +117,15 @@
              margin: auto;
         }
         .card-slider .card{
-            height:200px;
             width: 3.1%;
             transition: 0.5s ease;
             flex:inherit !important;
             position: relative;
             right: 0;
+            cursor: pointer;
+            transition: 0.5s ease;
+            box-shadow: 0 10px 18px 0 rgba(0,0,0,0.2);
+            background-color: #f1f1f1;
             left: 0;
         }
         .card-slider .left-move{
@@ -104,6 +139,7 @@
         .card-slider .card-container{
             overflow: hidden;
             margin: 20px;
+            padding-bottom: 26px;
         }
         .card-slider .card-slide{
             top: 0%;
@@ -112,7 +148,9 @@
             left: 0%;
             transition: 0.5s ease;
         }
-
+        .card-slider .card:hover{
+            
+        }
         .card-slider .card-deck  .button a i{
             color: #000000;
             transition: 0.5s ease;
@@ -126,7 +164,24 @@
         .card-slider .card-deck  .button-right{
             right:0%;
         }
-
+        .card-slider .card-deck .card .image-container{
+            position: relative;
+        }
+        .card-slider .card-deck .card .event-name{
+            background-color: rgba(0,0,0,0.3);
+            position: absolute;
+            top: 89%;
+            width: 100%;
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            padding: 5px 0px;
+            transform: translateY(-50%);
+        }
+        .card-slider .card-deck .card .event-location .location span{
+            font-size: 20px;
+        }
         
         
         /***************CSS FOR SLDIER MEDIA QUERY*****************/
@@ -134,6 +189,10 @@
         @media only screen and (max-width:500px){
             .img-slider .slider-image img{
                 height: 200px;
+            }
+            .img-slider .slider-image .slider-text{
+                font-size: 0.7rem;
+                bottom: 25%;
             }
             .event-tab .event-container .card .card-body{
                 padding: 0.5rem;
