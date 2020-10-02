@@ -75,11 +75,11 @@
             cursor: pointer;
             z-index: 2;
         }
-        .img-slider .button a i{
+        .img-slider .button a span{
             color: #ffffff;
             transition: 0.5s ease;
         }
-        .img-slider .button a i:hover{
+        .img-slider .button a span:hover{
             color: #000000;
         }
         .img-slider .button-left{
@@ -151,11 +151,11 @@
         .card-slider .card:hover{
             
         }
-        .card-slider .card-deck  .button a i{
+        .card-slider .card-deck  .button a span{
             color: #000000;
             transition: 0.5s ease;
         }
-        .card-slider .card-deck .button a i:hover{
+        .card-slider .card-deck .button a span:hover{
             color: red;
         }
         .card-slider .card-deck .button-left{
@@ -175,6 +175,7 @@
             color: #fff;
             font-size: 1.5rem;
             font-weight: bold;
+            text-transform: capitalize;
             text-align: center;
             padding: 5px 0px;
             transform: translateY(-50%);
@@ -193,6 +194,7 @@
             .img-slider .slider-image .slider-text{
                 font-size: 0.7rem;
                 bottom: 25%;
+                text-transform: capitalize;
             }
             .event-tab .event-container .card .card-body{
                 padding: 0.5rem;
@@ -200,7 +202,7 @@
             .event-tab .event-container .card .date-tab , .event-tab .event-container .card .day-tab{
                 font-size: 0.9rem;
             }
-            .event-tab .event-container .card i{
+            .event-tab .event-container .card span{
                 bottom: -26%;
             }
         }

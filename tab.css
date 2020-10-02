@@ -29,10 +29,12 @@
         .event-tab .event-container .card .date-tab{
             font-weight: 500;
             font-size: 2rem;
+            text-transform: capitalize;
         }
-        .event-tab .event-container .card i{
+        .event-tab .event-container .card span{
             position: absolute;
             bottom: -25%;
+            font-size: 48px;
             left: 50%;
             background-image: -webkit-linear-gradient(to bottom right, #E259a3, #F75288);
             background-image: linear-gradient(to bottom right, #E259a3, #F75288);
@@ -43,13 +45,19 @@
             transition: 0.5s ease;
             transform: translateX(-50%);
         }
-        .event-tab .event-container .card i.active{
+        .event-tab .event-container .card span.active{
             opacity: 1;
         }
         .event-tab .event-container .card .card-body{
             padding-bottom: 0px;
         }
-
+        .event-tab-container .event-descp{
+            display:none;
+            transition: 0.5s ease;
+        }
+        .event-tab-container .active{
+            display:block;
+        }
         /***************CSS FOR Tab MEDIA QUERY*****************/
 
         @media only screen and (max-width:500px){
@@ -62,7 +70,7 @@
             .event-tab .event-container .card .date-tab , .event-tab .event-container .card .day-tab{
                 font-size: 0.9rem;
             }
-            .event-tab .event-container .card i{
+            .event-tab .event-container .card span{
                 bottom: -27%;
             }
         }

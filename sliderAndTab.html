@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SLIDESHOW</title>
     
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -14,6 +13,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
     <link rel="stylesheet" href="slider.css">
+    <link rel="stylesheet" href="card-slider.css">
     <link rel="stylesheet" href="tab.css">
     <style>
         
@@ -23,10 +23,10 @@
     <div class="img-slider ">
         <!--LEFT RIGHT BUTTON-->
         <div class="button button-left" onclick="left()">
-            <a ><i class="fas fa-angle-left fa-2x"></i></i></a>
+            <a ><span class="material-icons">arrow_back_ios</span></a>
         </div>
         <div class="button button-right" onclick="right()">
-            <a ><i class="fas fa-angle-right fa-2x"></i></i></a>
+            <a ><span class="material-icons">arrow_forward_ios</span></a>
         </div>
         <!-- Full-width images -->
         <div class="slider-image ">
@@ -46,9 +46,9 @@
       
         <!-- The dots/circles -->
         <div class="pointer">
-            <div class="dot" onclick="move(0)"><i class="fas fa-circle "></i></div>
-            <div class="dot" onclick="move(1)"><i class="fas fa-circle "></i></div>
-            <div class="dot" onclick="move(2)"><i class="fas fa-circle "></i></div>
+            <div class="dot" onclick="move(0)"><span class="material-icons">stop_circle</span></div>
+            <div class="dot" onclick="move(1)"><span class="material-icons">stop_circle</span></div>
+            <div class="dot" onclick="move(2)"><span class="material-icons">stop_circle</span></div>
         </div>
       </div>
       <br>
@@ -61,10 +61,10 @@
             <!--BUTTON-->
 
             <div class="button button-left" onclick="leftCard()">
-                <a ><i class="fas fa-angle-left fa-2x"></i></i></a>
+                <a ><span class="material-icons">arrow_back_ios</span></a>
             </div>
             <div class="button button-right" onclick="rightCard()">
-                <a ><i class="fas fa-angle-right fa-2x"></i></i></a>
+                <a ><span class="material-icons">arrow_forward_ios</span></a>
             </div>
 
         <!--SLIDER-->
@@ -82,7 +82,7 @@
                       </p>
                       <div class="event-location clearfix font-weight-bold pt-4">
                           <div class="location float-left"><span class="material-icons align-text-bottom">location_on</span>Convocation Hall</div>
-                          <div class="float-right"><a href="#"><i class="fas fa-share-alt"></i></a></div>
+                          <div class="float-right"><a href="#"><span class="material-icons">share</span></a></div>
                       </div>
                     </div>
                   </div>
@@ -97,7 +97,7 @@
                       </p>
                       <div class="event-location clearfix font-weight-bold pt-4">
                           <div class="location float-left"><span class="material-icons align-text-bottom">location_on</span>Convocation Hall</div>
-                          <div class="float-right"><a href="#"><i class="fas fa-share-alt"></i></a></div>
+                          <div class="float-right"><a href="#"><span class="material-icons">share</span></a></div>
                       </div>
                     </div>
                   </div>
@@ -112,7 +112,7 @@
                       </p>
                       <div class="event-location clearfix font-weight-bold pt-4">
                           <div class="location float-left"><span class="material-icons align-text-bottom">location_on</span>Convocation Hall</div>
-                          <div class="float-right"><a href="#"><i class="fas fa-share-alt"></i></a></div>
+                          <div class="float-right"><a href="#"><span class="material-icons">share</span></a></div>
                       </div>
                     </div>
                   </div>
@@ -127,7 +127,7 @@
                       </p>
                       <div class="event-location clearfix font-weight-bold pt-4">
                           <div class="location float-left"><span class="material-icons align-text-bottom">location_on</span>Convocation Hall</div>
-                          <div class="float-right"><a href="#"><i class="fas fa-share-alt"></i></a></div>
+                          <div class="float-right"><a href="#"><span class="material-icons">share</span></a></div>
                       </div>
                     </div>
                   </div>
@@ -142,7 +142,7 @@
                       </p>
                       <div class="event-location clearfix font-weight-bold pt-4">
                           <div class="location float-left"><span class="material-icons align-text-bottom">location_on</span>Convocation Hall</div>
-                          <div class="float-right"><a href="#"><i class="fas fa-share-alt"></i></a></div>
+                          <div class="float-right"><a href="#"><span class="material-icons">share</span></a></div>
                       </div>
                     </div>
                   </div>
@@ -157,7 +157,7 @@
         <div class="event-container">
             <div class="card-columns">
               <div class="card bg-light tab-card" onclick="dateChange('0')">
-                <i class="fas fa-caret-down fa-3x active"></i>
+                <span class="material-icons">arrow_drop_down</span>
                 <div class="card-body text-center">
                   <p class="card-text">
                         <div class="date-tab">
@@ -169,7 +169,7 @@
                 </div>
               </div>
               <div class="card bg-light tab-card" onclick="dateChange('1')">
-                <i class="fas fa-caret-down fa-3x"></i>
+                <span class="material-icons">arrow_drop_down</span>
                 <div class="card-body text-center">
                   <p class="card-text">
                         <div class="date-tab">
@@ -181,7 +181,7 @@
                 </div>
               </div>
               <div class="card bg-light tab-card" onclick="dateChange('2')">
-                <i class="fas fa-caret-down fa-3x"></i>
+                <span class="material-icons">arrow_drop_down</span>
                 <div class="card-body text-center">
                     <p class="card-text">
                         <div class="date-tab">
@@ -194,7 +194,7 @@
                 </div>
               </div>
               <div class="card bg-light tab-card" onclick="dateChange('3')">
-                <i class="fas fa-caret-down fa-3x"></i>
+                <span class="material-icons">arrow_drop_down</span>
                 <div class="card-body text-center">
                     <p class="card-text">
                         <div class="date-tab">
@@ -207,7 +207,7 @@
                 </div>
               </div>
               <div class="card bg-light tab-card" onclick="dateChange('4')">
-                <i class="fas fa-caret-down fa-3x"></i>
+               <span class="material-icons">arrow_drop_down</span>
                 <div class="card-body text-center">
                     <p class="card-text">
                         <div class="date-tab">
@@ -219,8 +219,8 @@
                     </p>
                 </div>
               </div>
-              <div class="card bg-light tab-card" onclick="dateChange('4')">
-                <i class="fas fa-caret-down fa-3x"></i>
+              <div class="card bg-light tab-card" onclick="dateChange('5')">
+                <span class="material-icons">arrow_drop_down</span>
                 <div class="card-body text-center">
                     <p class="card-text">
                         <div class="date-tab">
@@ -233,6 +233,56 @@
                 </div>
               </div>
             </div>
+        </div>
+        <div class="event-tab-container mt-3 bg-secondary container text-white">
+          <div class="event-descp p-3">
+            First ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </div>
+          <div class="event-descp p-3">
+            Second ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </div>
+          <div class="event-descp p-3">
+            Third ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </div>
+          <div class="event-descp p-3">
+            Fourth ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </div>
+          <div class="event-descp p-3">
+            Fifth ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </div>
+          <div class="event-descp p-3">
+            Sixth ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </div>
         </div>
     </div>
 </body>

@@ -61,7 +61,7 @@
     let TotalCards = 0;
     let activeCards = 1;
     let smActiveCards = 1;
-    function leftCard(){
+    function rightCard(){
         let i=0;
         let card = document.getElementsByClassName("s-card");
         if(window.innerWidth<=576){
@@ -108,7 +108,7 @@
             }
         }   
     }
-    function rightCard(){
+    function leftCard(){
         let i=0;
         let card = document.getElementsByClassName("s-card");
         if(activeCards!==1 || smActiveCards!==1){
