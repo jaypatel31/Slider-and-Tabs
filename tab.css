@@ -58,6 +58,20 @@
         .event-tab-container .active{
             display:block;
         }
+        .tns-controls button {
+            border:none;
+            position: absolute;
+            transform: translate(-50%,-50%);
+            top:50%;
+            z-index: 2;
+            outline: none;
+        }
+        .tns-controls button[data-controls="next"]{
+            right:0%;
+        }
+        .tns-controls button[data-controls="prev"]{
+            left:2%;
+        }
         /***************CSS FOR Tab MEDIA QUERY*****************/
 
         @media only screen and (max-width:500px){
@@ -71,6 +85,10 @@
                 font-size: 0.9rem;
             }
             .event-tab .event-container .card span{
-                bottom: -27%;
+                bottom: -32%;
+            }
+            .tns-controls button[data-controls="prev"]{
+                left:8%;
             }
         }
+

@@ -1,4 +1,5 @@
 //*******TABS**********
+
     function intialDateTab(){
         let today = new Date();
         today = today.getDate();
@@ -33,3 +34,30 @@
        allDate[num].children[0].classList.add('active');
        allEvent[num].classList.add('active');
     }
+
+//*****************TABS SLIDER JS***************
+
+   var slider = tns({
+    container: '.my-slider',
+     "items": 4,
+     "controls": true,
+     "controlsText" : ['<span class="material-icons">arrow_back_ios</span>','<span class="material-icons">arrow_forward_ios</span>'],
+      "autoplay": false,
+      "slideBy": "1",
+      "mouseDrag": true,
+      "loop": false,
+       "responsive": {
+        "350": {
+          "items": 1
+        },
+        "500": {
+          "items": 3
+        },
+        "1100": {
+         "items" : 4
+        }
+      },
+      "nav":false,
+      "swipeAngle": false,
+      "speed": 400,
+    });

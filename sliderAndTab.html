@@ -9,6 +9,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Important Owl stylesheet -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
@@ -153,10 +158,10 @@
 
     <!--TABS SECTION-->
 
-    <div class="event-tab clearfix">
-        <div class="event-container">
-            <div class="card-columns">
-              <div class="card bg-light tab-card" onclick="dateChange('0')">
+    <div class="event-tab clearfix" >
+        <div class="event-container ">
+            <div class="card-columns my-slider">
+              <div class="card bg-light tab-card item" onclick="dateChange('0')">
                 <span class="material-icons">arrow_drop_down</span>
                 <div class="card-body text-center">
                   <p class="card-text">
@@ -168,7 +173,7 @@
                         </div></p>
                 </div>
               </div>
-              <div class="card bg-light tab-card" onclick="dateChange('1')">
+              <div class="card bg-light tab-card item" onclick="dateChange('1')">
                 <span class="material-icons">arrow_drop_down</span>
                 <div class="card-body text-center">
                   <p class="card-text">
@@ -180,7 +185,7 @@
                         </div></p>
                 </div>
               </div>
-              <div class="card bg-light tab-card" onclick="dateChange('2')">
+              <div class="card bg-light tab-card item" onclick="dateChange('2')">
                 <span class="material-icons">arrow_drop_down</span>
                 <div class="card-body text-center">
                     <p class="card-text">
@@ -193,7 +198,7 @@
                     </p>
                 </div>
               </div>
-              <div class="card bg-light tab-card" onclick="dateChange('3')">
+              <div class="card bg-light tab-card item" onclick="dateChange('3')">
                 <span class="material-icons">arrow_drop_down</span>
                 <div class="card-body text-center">
                     <p class="card-text">
@@ -206,7 +211,7 @@
                     </p>
                 </div>
               </div>
-              <div class="card bg-light tab-card" onclick="dateChange('4')">
+              <div class="card bg-light tab-card item" onclick="dateChange('4')">
                <span class="material-icons">arrow_drop_down</span>
                 <div class="card-body text-center">
                     <p class="card-text">
@@ -219,7 +224,7 @@
                     </p>
                 </div>
               </div>
-              <div class="card bg-light tab-card" onclick="dateChange('5')">
+              <div class="card bg-light tab-card item" onclick="dateChange('5')">
                 <span class="material-icons">arrow_drop_down</span>
                 <div class="card-body text-center">
                     <p class="card-text">
@@ -285,10 +290,15 @@
           </div>
         </div>
     </div>
+
+ 
+
+
 </body>
+<script type="module">
+  import {tns} from 'ts/src/tiny-slider.js';
+</script>
 <script src="slider.js"></script>
 <script src="tab.js"></script>
-<script>
-    
-</script>
+
 </html>
